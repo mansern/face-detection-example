@@ -1,1 +1,1 @@
-export const clarifaiAPIKey = "9a1dbd37e7cc4566a6938e27589bf178"
+export const clarifaiAPIKey = "9a1dbd39e7cc4553a6938e27589bf245" // dummy key, use your own key
