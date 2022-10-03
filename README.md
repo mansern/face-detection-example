@@ -13,7 +13,7 @@ You need to register on Clarifai to create a sample project and use it's API key
 
 1. Clone the repository.
 2. Install NPM packages: `npm install` or `npm i`.
-3. Run the API: `npm start`.
+3. Run the project: `npm start`.
 
 ## Author
 
