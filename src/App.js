@@ -16,17 +16,26 @@ export default function App() {
   const [box, setBox] = React.useState({});
 
   const calculateFaceLocation = (data) => {
-    const clarifaiFace =
-      data.outputs[0].data.regions[0].region_info.bounding_box;
+    let result = [];
+    if (Array.isArray(data.outputs[0].data.regions)) {
+      data.outputs[0].data.regions.forEach((item) => {
+        result.push(item.region_info.bounding_box);
+      })
+    }
+
+    let box = [];
     const image = document.getElementById("inputimage");
     const width = Number(image.width);
     const height = Number(image.height);
-    return {
-      leftCol: clarifaiFace.left_col * width,
-      topRow: clarifaiFace.top_row * height,
-      rightCol: width - clarifaiFace.right_col * width,
-      bottomRow: height - clarifaiFace.bottom_row * height,
-    };
+    result.forEach((item) => {
+      box.push({
+        leftCol: item.left_col * width,
+        topRow: item.top_row * height,
+        rightCol: width - item.right_col * width,
+        bottomRow: height - item.bottom_row * height,
+      });
+    });
+    return box;
   };
   const displayFaceBox = (box) => {
     setBox(box)
