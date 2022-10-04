@@ -5,6 +5,8 @@
 
 A simple repository developed in Reactjs to demonstrate how to implement Face Detection using Clarifai, a platform for visual recognition. According to their official documentation, Clarifai is the easiest deep learning AI platform for developers, data scientists and no-code operators, The only AI platform that lets you label data programmatically, train models efficiently, improve performance iteratively and deploy applications rapidly.
 
+It has support for a single as well as multiple faces to detect from an image.
+
 ## Pre-requisites
 
 1. Clarifai (https://www.clarifai.com)
